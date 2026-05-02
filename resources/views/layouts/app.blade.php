@@ -83,7 +83,7 @@
                             <i class="bi bi-bag-check"></i> Pesanan Saya </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                             <i class="bi bi-person-circle"></i> {{ Auth::user()->name }} </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
