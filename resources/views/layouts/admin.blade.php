@@ -57,8 +57,6 @@
                 <a href="/admin/categories" class="nav-link {{ request()- >is('admin/categories*') ? 'active' : '' }}">
                     <i class="bi bi-tags me-2"></i> Kategori
                 </a>
-                Halaman 8
-                FoodMart Laravel | Fase 2 — Auth (Register, Login, Logout, Middleware)
                 <a href="/admin/products" class="nav-link {{ request()- >is('admin/products*') ? 'active' : '' }}">
                     <i class="bi bi-box-seam me-2"></i> Produk
                 </a>

@@ -41,8 +41,6 @@
 @error('email') is-invalid @enderror" value="{{ old('email') }}" placeholder="email@contoh.com" required>
                             </div>
                             <div class="mb-3">
-                                Halaman 11
-                                FoodMart Laravel | Fase 2 — Auth (Register, Login, Logout, Middleware)
                                 <label class="form-label">Password</label> <input type="password" name="password"
                                     class="form-control" placeholder="Min. 6 karakter" required>
                             </div>

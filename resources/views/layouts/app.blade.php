@@ -66,8 +66,6 @@
                         <a class="nav-link {{ request()->is('contact') ? 'fw-bold text success' : '' }}"
                             href="/contact">Contact</a>
                     </li>
-                    Halaman 6
-                    FoodMart Laravel | Fase 2 — Auth (Register, Login, Logout, Middleware)
                 </ul>
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item me-2">
@@ -117,8 +115,6 @@
     <main class="container my-4">
         @yield('content')
     </main>
-    Halaman 7
-    FoodMart Laravel | Fase 2 — Auth (Register, Login, Logout, Middleware)
     {{-- FOOTER --}}
     <footer class="py-3 mt-5">
         <div class="container text-center">
@@ -126,7 +122,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-        </sc ript> 
-@stack('scripts') 
-</body> 
+    </script>
+    @stack('scripts')
+</body>
+
 </html>

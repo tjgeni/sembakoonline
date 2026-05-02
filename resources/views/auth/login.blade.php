@@ -50,9 +50,8 @@
             </div>
         </div>
     </div>
-    Halaman 10
-    FoodMart Laravel | Fase 2 — Auth (Register, Login, Logout, Middleware)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-        </sc ript> 
-</body> 
+    </script>
+</body>
+
 </html>
