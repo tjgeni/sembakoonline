@@ -26,13 +26,14 @@
             @if($product->image)
             <img src="{{ asset('storage/' . $product->image) }}" class="card-img-top"
                 style="height:160px;object-fit:cover;"
-                onerror="this.src='https://via.placeholder.com/300x160?text=No+Image'"> @else
+                onerror="this.src='https://via.placeholder.com/300x160?text=No+Image'">
+            @else
             <img src="https://via.placeholder.com/300x160?text=No+Image" class="card-img-top"
                 style="height:160px;object-fit:cover;"> @endif
             <div class="card-body p-2">
-                <p class="card-text small text-muted mb-1">{{ $product->category- >name ?? '-' }}</p>
-                <h6 class="card-title mb-1" style="font-size:.9rem;">{{ $product- >name }}</h6>
-                <p class="fw-bold text-success mb-2">Rp {{ number_format($product- >price,0,',','.') }}</p>
+                <p class="card-text small text-muted mb-1">{{ $product->category->name ?? '-' }}</p>
+                <h6 class="card-title mb-1" style="font-size:.9rem;">{{ $product->name }}</h6>
+                <p class="fw-bold text-success mb-2">Rp {{ number_format($product->price,0,',','.') }}</p>
                 <a href="/produk/{{ $product->id }}" class="btn btn-outline-success  btn-sm w-100">
                     <i class="bi bi-eye"></i> Detail
                 </a>
