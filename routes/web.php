@@ -1,8 +1,13 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\User\AboutController;
+use App\Http\Controllers\User\ContactController;
 use Illuminate\Support\Facades\Route;
 
 // ── Redirect root ──────────────────────────────────────
@@ -17,9 +22,9 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 // ── User routes ────────────────────────────────────────
 Route::middleware(['auth', 'user'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
-    // Route::get('/about', [AboutController::class, 'index'])->name('about');
-    // Route::get('/contact', [ContactController::class, 'index'])->name('contact');
-    // Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+    Route::get('/about', [AboutController::class, 'index'])->name('about');
+    Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+    Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
     // Route::get('/produk', [UserProductController::class, 'index'])->name('produk.index');
     // Route::get('/produk/{product}', [UserProductController::class, 'show'])->name('produk.show');
 
@@ -38,13 +43,13 @@ Route::middleware(['auth', 'user'])->group(function () {
 
 // ── Admin routes ───────────────────────────────────────
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    // Route::resource('categories', CategoryController::class);
-    // Route::resource('products', ProductController::class);
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+    Route::resource('categories', CategoryController::class);
+    Route::resource('products', ProductController::class);
     // Route::get('/orders', [AdminOrderController::class, 'index'])->name('orders.index');
     // Route::get('/orders/{order}', [AdminOrderController::class, 'show'])->name('orders.show');
     // Route::patch('/orders/{order}/status', [AdminOrderController::class,
-    //     'updateStatus'])->name('orders.updateStatus');
+    // 'updateStatus'])->name('orders.updateStatus');
     // Route::get('/users', [UserController::class, 'index'])->name('users.index');
-    // Route::get('/messages', [AdminMessageController::class, 'index'])->name('messages.index');
+    Route::get('/messages', [MessageController::class, 'index'])->name('messages.index');
 });

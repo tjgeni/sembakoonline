@@ -34,7 +34,7 @@
                 <p class="card-text small text-muted mb-1">{{ $product->category->name ?? '-' }}</p>
                 <h6 class="card-title mb-1" style="font-size:.9rem;">{{ $product->name }}</h6>
                 <p class="fw-bold text-success mb-2">Rp {{ number_format($product->price,0,',','.') }}</p>
-                <a href="/produk/{{ $product->id }}" class="btn btn-outline-success  btn-sm w-100">
+                <a href="/produk/{{ $product->id }}" class="btn btn-outline-success btn-sm w-100">
                     <i class="bi bi-eye"></i> Detail
                 </a>
             </div>

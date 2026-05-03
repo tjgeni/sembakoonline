@@ -51,13 +51,13 @@
                 <div style="font-size:.7rem;color:#6c757d;font-weight:400;">Admin Panel</div>
             </div>
             <nav class="nav flex-column gap-1">
-                <a href="/admin/dashboard" class="nav-link {{ request()- >is('admin/dashboard') ? 'active' : '' }}">
+                <a href="/admin/dashboard" class="nav-link {{ request()->is('admin/dashboard') ? 'active' : '' }}">
                     <i class="bi bi-speedometer2 me-2"></i> Dashboard
                 </a>
-                <a href="/admin/categories" class="nav-link {{ request()- >is('admin/categories*') ? 'active' : '' }}">
+                <a href="/admin/categories" class="nav-link {{ request()->is('admin/categories*') ? 'active' : '' }}">
                     <i class="bi bi-tags me-2"></i> Kategori
                 </a>
-                <a href="/admin/products" class="nav-link {{ request()- >is('admin/products*') ? 'active' : '' }}">
+                <a href="/admin/products" class="nav-link {{ request()->is('admin/products*') ? 'active' : '' }}">
                     <i class="bi bi-box-seam me-2"></i> Produk
                 </a>
                 <a href="/admin/orders" class="nav-link {{ request()->is('admin/orders*') ?  'active' : '' }}">
@@ -66,7 +66,7 @@
                 <a href="/admin/users" class="nav-link {{ request()->is('admin/users*') ?  'active' : '' }}">
                     <i class="bi bi-people me-2"></i> Users
                 </a>
-                <a href="/admin/messages" class="nav-link {{ request()- >is('admin/messages*') ? 'active' : '' }}">
+                <a href="/admin/messages" class="nav-link {{ request()->is('admin/messages*') ? 'active' : '' }}">
                     <i class="bi bi-envelope me-2"></i> Pesan
                 </a>
                 <hr style="border-color:#2d3748;">
